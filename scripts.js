@@ -4,6 +4,7 @@ var divclass = document.getElementsByClassName("divclass");
 
 var translateNum = 0;
 
+
 var Footerer = document.getElementById("footer");
 var FooterMaxRange = false;
 
@@ -12,7 +13,6 @@ var lightBox = document.getElementsByClassName("light-box")
 
 // --------------------------------------------------
 ////////////////////TESTING ZONE/////////////////////
-
 
 
 
@@ -42,11 +42,9 @@ window.addEventListener("keyup",(e)=>{
     }
 })
 
-//RESIZE
+//RESIZEas
 window.addEventListener("resize", redimensionar); 
 function redimensionar(){
-    console.log(window.innerWidth);
-    console.log(window.innerHeight);
     camera.aspect= window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -63,13 +61,18 @@ window.addEventListener("click", (e)=>{
         for (let i = 0; i < divclass.length; i++) {
             divclass[i].style.transform="translateY("+translateNum+"px)";
         }
-    }else if (VisorImg==false && e.target.hash == "#news") {
-        translateNum=-2500;
+    }else if (VisorImg==false && e.target.hash == "#about") {
+        translateNum=-750;
+        for (let i = 0; i < divclass.length; i++) {
+            divclass[i].style.transform="translateY("+translateNum+"px)";
+        }
+    }else if (VisorImg==false && e.target.hash == "#proyects") {
+        translateNum=-2300;
         for (let i = 0; i < divclass.length; i++) {
             divclass[i].style.transform="translateY("+translateNum+"px)";
         }
     } else if (VisorImg==false && e.target.hash == "#contact") {
-        translateNum=-2700;
+        translateNum=-2450;
         // Footer
         Footerer.style.top="80%";
         FooterMaxRange = true;
@@ -94,27 +97,22 @@ Footerer.addEventListener("mouseout", (e)=>{
 //Scrolleo
 docbody.addEventListener("wheel",(e)=>{
     //DOWN
-    console.log(translateNum)
     if(e.deltaY==100 && translateNum<0 && VisorImg == false){
-        console.log(translateNum);
         translateNum+=50;
         // Footer
         Footerer.style.top="99%";
         FooterMaxRange = false;
-        //
         for (let i = 0; i < divclass.length; i++) {
             divclass[i].style.transform="translateY("+translateNum+"px)";
         }
     }
     //UP
-    else if (e.deltaY==-100 && translateNum>-2700 && VisorImg == false){
-        console.log(translateNum);
+    else if (e.deltaY==-100 && translateNum>-2450 && VisorImg == false){
         translateNum-=50;
         for (let i = 0; i < divclass.length; i++) {
             divclass[i].style.transform="translateY("+translateNum+"px)";
         }
-    }else if (e.deltaY==-100 && translateNum<=-2700 && VisorImg == false) {
-        console.log("llego a -2800");
+    }else if (e.deltaY==-100 && translateNum<=-2450 && VisorImg == false) {
         // Footer
         Footerer.style.top="80%";
         FooterMaxRange = true;

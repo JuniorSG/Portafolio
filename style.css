@@ -88,12 +88,12 @@ h3{
 #navbar{
     position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     margin-top: 3%;
     width:80%;
     height:max-content;
-    left: 20%;
-    top: 10px;
+    left: 60vw;
+    top: 1vh;
     background-color: rgba(255, 228, 196, 0);
 }
 
@@ -117,7 +117,7 @@ h3{
     height:130px;
     width:130px;
 }
-#LOGOTIPO:hover{
+/* #LOGOTIPO:hover{
     margin: auto;
     transform:translate(10px , 15px);
 
@@ -128,7 +128,7 @@ h3{
     width:130px;
     transition: 1s;
     transform:translateY(-16px);
-}
+} */
 #navR{
     display: flex;
     margin-right: 10%;
@@ -182,7 +182,7 @@ h3{
 
 #Div2-1{
     position: fixed;
-    margin: auto;
+    margin-top: -5%;
     width:90%;
     height:300px;
     font-size:50px;
@@ -206,7 +206,6 @@ h3{
 /* About */
 #Div3{
     margin-top: 150px;
-    margin-bottom: 190px;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     height: max-content;
@@ -257,7 +256,7 @@ h3{
     width: max-content;
     height: max-content;
     transform:translateY(0px);
-    position: relative;
+    position: fixed;
 }
 .imagenesP{
     width: 350px;
@@ -270,36 +269,36 @@ h3{
     position: absolute;
 }
 #Preimg-1{
-    left: 100px;
-    top: 50px;
+    left: 7vw;
+    top: 7vh;
 }
 #Preimg-2{
-    left: 570px;
-    top: 50px;
+    left: 38vw;
+    top: 7vh;
 }
 #Preimg-3{
-    left: 1038px;
-    top: 50px;
+    left: 69vw;
+    top: 7vh;
 }
 #Preimg-4{
-    left: 100px;
-    top: 300px;
+    left:  7vw;
+    top: 40vh;
 }
 #Preimg-5{
-    left: 1038px;
-    top: 300px;
+    left: 69vw;
+    top: 40vh;
 }
 #Preimg-6{
-    left: 100px;
-    top: 550px;
+    left:  7vw;
+    top: 74vh;
 }
 #Preimg-7{
-    left: 570px;
-    top: 550px;
+    left: 38vw;
+    top: 74vh;
 }
 #Preimg-8{
-    left: 1038px;
-    top: 550px;
+    left: 69vw;
+    top: 74vh;
 }
 #canvasFrame{
     position: absolute;

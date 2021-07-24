@@ -13,7 +13,9 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 
 //CAMERA
 camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-camera.position.z = 5;
+camera.position.z = 0.9;
+camera.position.y = -0.45;
+
 
 //SCENE
 scene = new THREE.Scene();
@@ -39,12 +41,12 @@ var object;
 
 function handle_load(gltf) {
 
-    console.log(gltf, "LOADER");
+
     object = gltf.scene;
-    console.log(object.children[0]);
+
     
     scene.add( object );
-    object.position.z = -40;
+    object.position.z = -50;
     object.scale.set(0.2, 0.2, 0.2);
     object.position.set(0, -0.5, 0);
     
@@ -52,16 +54,15 @@ function handle_load(gltf) {
     
 
     window.addEventListener("mousemove", (e)=>{
-        console.log(e)
         var lookX = 0.05*(e.clientX-(window.innerWidth/2))
         var lookY = (-(0.05*(e.clientY-(window.innerHeight/2)))+5)
         object.lookAt(lookX,lookY,30);
-        light2.position.set(0, 2, 5);
+        light2.position.set(0, 1, 1);
         // console.log(cube.lookAt);
         window.addEventListener("mouseout", (e)=>{
             lookX=0;
             lookY=0;
-            light2.position.set(0, 0, 1);
+            light2.position.set(0, 0.5, -0.9);
             object.lookAt(lookX,lookY,30)
         });
         
