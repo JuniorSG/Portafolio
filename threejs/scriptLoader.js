@@ -9,7 +9,7 @@ renderer = new THREE.WebGLRenderer({canvas, alpha: true});
 renderer.setClearColor(0xffffff, 0);
 // scene.renderer.setClearColor(0xffffff, 0);
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(window.innerWidth*0.97, window.innerHeight*0.97);
 
 //CAMERA
 camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -52,6 +52,14 @@ function handle_load(gltf) {
     
     light2.lookAt(object.position);
     
+    //RESIZEas
+    window.addEventListener("resize", redimensionar); 
+    function redimensionar(){
+        camera.aspect= window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.render(scene, camera);
+    }
 
     window.addEventListener("mousemove", (e)=>{
         var lookX = 0.05*(e.clientX-(window.innerWidth/2))

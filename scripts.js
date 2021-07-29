@@ -11,8 +11,10 @@ var FooterMaxRange = false;
 var VisorImg = false;
 var lightBox = document.getElementsByClassName("light-box")
 
+var StylerSheet = document.getElementById("Styler")
 // --------------------------------------------------
 ////////////////////TESTING ZONE/////////////////////
+
 
 
 
@@ -45,9 +47,9 @@ window.addEventListener("keyup",(e)=>{
 //RESIZEas
 window.addEventListener("resize", redimensionar); 
 function redimensionar(){
-    camera.aspect= window.innerWidth / window.innerHeight;
+    camera.aspect= (window.innerWidth*0.97) / (window.innerHeight*0.97);
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth*0.97, window.innerHeight*0.97);
     renderer.render(scene, camera);
 }
 
@@ -94,28 +96,14 @@ Footerer.addEventListener("mouseout", (e)=>{
     }
 })
 
-//Scrolleo
-docbody.addEventListener("wheel",(e)=>{
-    //DOWN
-    if(e.deltaY==100 && translateNum<0 && VisorImg == false){
-        translateNum+=50;
-        // Footer
-        Footerer.style.top="99%";
-        FooterMaxRange = false;
-        for (let i = 0; i < divclass.length; i++) {
-            divclass[i].style.transform="translateY("+translateNum+"px)";
+
+    var StylerSheet = document.getElementById("Styler")
+    var Scripter = document.getElementById("Scripter")
+    
+    
+    // Style
+    document.addEventListener("DOMContentLoaded", function() {
+        if (window.innerWidth<1200){
+            StylerSheet.href="style_2.css"
         }
-    }
-    //UP
-    else if (e.deltaY==-100 && translateNum>-2450 && VisorImg == false){
-        translateNum-=50;
-        for (let i = 0; i < divclass.length; i++) {
-            divclass[i].style.transform="translateY("+translateNum+"px)";
-        }
-    }else if (e.deltaY==-100 && translateNum<=-2450 && VisorImg == false) {
-        // Footer
-        Footerer.style.top="80%";
-        FooterMaxRange = true;
-        //
-    }
-})
+      });

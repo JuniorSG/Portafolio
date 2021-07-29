@@ -8,6 +8,7 @@
 canvas{
     position: fixed;
     z-index: 0;
+    overflow: hidden;
 }
 
 html,body{
@@ -17,11 +18,10 @@ html,body{
 }
 
 body{
-    
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     background-color: rgb(2, 2, 2);
     background-image: url(img/BG.gif);
-    /* background-repeat: repeat; */
     background-size: 25%;
 }
 .ContenedorIdioms{
@@ -34,18 +34,21 @@ h1,h2,h4{
     color: rgb(146, 146, 146);
 }
 h1{
-    font-size:120px;
+    font-size:7.5vw;
     font-style: italic;
     text-shadow: rgb(204, 204, 204) 2px 3px 9px;
 }
 h2{
     font-style: italic;
-    font-size:70px;
+    font-size:5vw;
     margin-bottom: 50px;
 }
 h3{
-    font-size:40px;
+    font-size:2.5vw;
     color: rgb(126, 126, 126);
+}
+h4{
+    font-size:3vw;
 }
 
 #contenedorCarga{
@@ -64,8 +67,8 @@ h3{
     position: absolute;
     margin: 0px 0px 0px 0px;
     padding: 0px;
-    top: 80%;
-    left: 49%;
+    top: 45vh;
+    left: 45vw;
     height: 80px;
     width: 80px;
     border: 10px solid rgb(0, 0, 0);
@@ -82,79 +85,48 @@ h3{
 
 
 .divclass{
-    margin: 5px;
+    margin: 0px;
 }
-
 #navbar{
     position: absolute;
     display: flex;
     justify-content: right;
     margin-top: 3%;
-    width:80%;
+    width:max-content;
     height:max-content;
-    left: 60vw;
+    margin-right: 2vw;
+    right: 1vw;
     top: 1vh;
     background-color: rgba(255, 228, 196, 0);
 }
 
-#navL{
-    justify-content: center;
-    margin-left: -80px;
-    margin-top: -33px;
-    background-color: rgb(131, 131, 131);
-    height:80px;
-    width:80px;
-    border-radius: 100%;
-    border: 4px solid black;
-    overflow: hidden;
-    transition: 1s;
-    background-size: 5px;
-}
-
-#navL:hover{
-    transform:translate(15px , 10px);
-    z-index: 10000;
-    height:130px;
-    width:130px;
-}
-/* #LOGOTIPO:hover{
-    margin: auto;
-    transform:translate(10px , 15px);
-
-}
-
-#LOGOTIPO{
-    height:130px;
-    width:130px;
-    transition: 1s;
-    transform:translateY(-16px);
-} */
 #navR{
     display: flex;
-    margin-right: 10%;
     margin-top: -3%;
     overflow:hidden;
     height:max-content;
+    width: max-content;
 }
-
+.a1{
+    font-size: 20px;
+    text-decoration: none;
+    width: 4.2em;
+    color: rgb(161, 161, 161);
+    margin: 0.5em 2.5em 0.5em 2.5em;
+    justify-content: center;
+    text-align: center;
+}
 .A-Nav{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     margin: 0px;
     width:max-content;
-    height:50px;
+    height:2.5em;
     transition: 0.5s;
 }
 .A-Nav:hover{
-    transform:translateY(-45px);
+    transform:translateY(-3em);
 }
-
-.a1{
-    text-decoration: none;
-    color: rgb(161, 161, 161);
-    font-size: 20px;
-    margin: 10px 50px 10px 50px;
-}
-
 
 .A-Hover{
     color: rgb(255, 255, 255);
@@ -164,8 +136,8 @@ h3{
 /* SALUDO */
 #Div1{
     /* TOP, RIGHT, BOTTOM, LEFT */
-    width:1000px;
-    margin: 180px 0px 0px 22%;
+    width: max-content;
+    margin: 15vw 0px 0px 20vw;
 }
 
 /* BIO*/
@@ -174,28 +146,32 @@ h3{
     background-color: rgba(0, 0, 0, 0.521);
     width:100%;
     height: 400px;
-    margin: 300px 0px 0px 0px;
+    margin: 60vw 0px 0px 0px;
     display: flex;
     justify-content:center;
     align-items: center;
 }
 
 #Div2-1{
-    position: fixed;
+    position: absolute;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    transform: translateY(4vw);
     margin-top: -5%;
     width:90%;
     height:300px;
     font-size:50px;
-    transition:1s;
+    transition:2s;
     color: rgb(180, 180, 180);
 
 }
 
 .Div2-1-inactive{
-    left: 120%;
+    opacity: 0;
 }
 .Div2-1-active{
-    left:6%;
+    opacity: 1;
 }
 
 #BioT{
@@ -205,7 +181,7 @@ h3{
 
 /* About */
 #Div3{
-    margin-top: 150px;
+    margin: 50vw 0px 0px 0px ;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     height: max-content;
@@ -213,19 +189,19 @@ h3{
     background-color: rgba(0, 0, 0, 0.356);
 }
 .About{
-    height: 600px;
-    width: 300px;
-    margin: auto;
+    height: 40vw;
+    width: 33vw;
+    margin-left: auto;
     display: flex;
     justify-content:center;
     align-items: center;
     flex-direction: column;
 }
 
-.About > img{
-    height: 100px;
-    width: 100px;
-    margin-bottom: 15%;
+.ContenedorIdioms>img{
+    height: 4vh;
+    width: 4vw;
+    position: absolute;
 }
 .About > div{
     height: max-content;
@@ -245,65 +221,33 @@ h3{
 }
 
 /* PROYECTOS*/
+#ContenedorProyectos{
+    display: grid;
+    grid-template-columns:repeat(2, 350px);
+    margin-top: -10vw;
+    margin-bottom: 20vw;
+    gap: 10px;
+    justify-content: center;
+    width: 90vw;
+    height: max-content;
+    transform:translateY(0px);
+}
+
 #ContenedorProyectos > a > div {
-    display: flex;
-    position: fixed;
     overflow: hidden;
     width: max-content;
     height: max-content;
 }
-#ContenedorProyectos{
-    width: max-content;
-    height: max-content;
-    transform:translateY(0px);
-    position: fixed;
+#canvas{
+    z-index: -10;
+    position: relative;
 }
+
 .imagenesP{
     width: 350px;
     height: 200px;
     filter: blur(0px);
-    /* position: fixed; */
 }
-/* PRE IMAGENES */
-.PreImagenes{
-    position: absolute;
-}
-#Preimg-1{
-    left: 7vw;
-    top: 7vh;
-}
-#Preimg-2{
-    left: 38vw;
-    top: 7vh;
-}
-#Preimg-3{
-    left: 69vw;
-    top: 7vh;
-}
-#Preimg-4{
-    left:  7vw;
-    top: 40vh;
-}
-#Preimg-5{
-    left: 69vw;
-    top: 40vh;
-}
-#Preimg-6{
-    left:  7vw;
-    top: 74vh;
-}
-#Preimg-7{
-    left: 38vw;
-    top: 74vh;
-}
-#Preimg-8{
-    left: 69vw;
-    top: 74vh;
-}
-#canvasFrame{
-    position: absolute;
-}
-
 
 .a2{
     overflow: hidden;
@@ -317,15 +261,18 @@ h3{
 }
 #ContenedorProyectos a > div > img {
     transition: 1s;
+    z-index: 10;
 }
 #ContenedorProyectos a > div {
     transition: 0.5s;
 }
 #ContenedorProyectos a:hover > div {
+    position: absolute;
     transition: 0.5s;
+    transform: translateX(-50px) translateY(-30px) scale(1.2);
+    z-index: 10;
     box-shadow: 0px 0px 13px 1px rgb(255, 255, 255);
 }
-
 
 /* LightBoxes */
 .light-box{
@@ -354,7 +301,6 @@ h3{
  }
 .Show {
     position: fixed;
-    /* transform: scale(1); */
     height: 1500px;
     top: 0%;
 }
@@ -397,37 +343,34 @@ h3{
 
 /* THREE - ABOUT */
 #canvasFrame{
-    position: fixed;
-    margin-top: 200px;
-    width: 100%;
+    width: 90px;
     height: max-content;
 }
+
 
 /* FOOTER CONTACT */
 
 #footer{
-    position: absolute;
-    border-top: 5px solid rgb(255, 255, 255);
-    border-style: groove;
-    top: 99%;
-    left: -1%;
-    background-color: rgba(0, 0, 0, 0.685);
-    height: 150px;
-    width: 105%;
+    /* border-top: 5px solid rgb(255, 255, 255); */
+    /* border-style: groove; */
+    top: 100vh;
+    background-color: rgba(0, 0, 0, 0.884);
+    height: max-content;
+    width: 100%;
     transition: 1s;
 }
 #FooterContenedor{
-    position: relative;
-    left: 68%;
-    height: max-content;
+    height: 10vw;
     width: max-content;
 }
 
 #FootT{
     /* font-style: italic; */
+    width: max-content;
     font-size:30px;
-    color: rgb(170, 170, 170);
-    margin:20px 0 30px -25px;
+    font-style: italic;
+    color: rgba(170, 170, 170, 0.959);
+   
 }
 
 #ContactContenedor{
@@ -447,4 +390,87 @@ h3{
     color: rgb(105, 105, 105);
     font-size:25px;
     margin: 0px 10px -15px 10px;
+}
+
+/* widthxheight */
+/* @media (max-width:1280px){
+    
+} */
+@media (min-width:1200px){
+    #ContenedorProyectos{
+        position: absolute;
+        top: 2850px;
+        left: -1vw;
+    }
+    .PreImagenes{
+        position: absolute;
+    }
+    #Preimg-1{
+        left: 7vw;
+        top: 7vh;
+    }
+    #Preimg-2{
+        left: 38vw;
+        top: 7vh;
+    }
+    #Preimg-3{
+        left: 69vw;
+        top: 7vh;
+    }
+    #Preimg-4{
+        left:  7vw;
+        top: 40vh;
+    }
+    #Preimg-5{
+        left: 69vw;
+        top: 40vh;
+    }
+    #Preimg-6{
+        left:  7vw;
+        top: 74vh;
+    }
+    #Preimg-7{
+        left: 38vw;
+        top: 74vh;
+    }
+    #Preimg-8{
+        left: 69vw;
+        top: 74vh;
+    }
+    #footer{
+        margin-top: 100px;
+    }
+    #ContenedorProyectos a:hover > div {
+        position: absolute;
+        transition: 0.5s;
+        transform: scale(1.1);
+        z-index: 10;
+        box-shadow: 0px 0px 13px 1px rgb(255, 255, 255);
+    }
+
+}
+@media (max-width:875px){
+    #ContenedorProyectos{
+        grid-template-columns:repeat(1, 350px);
+    }
+    #Div3{
+        grid-template-columns:repeat(1, 100vw);
+
+    }
+    .About{
+        margin-left: 35vw;
+    }
+    .About > h2 {
+        font-size:100px;
+    }
+    .a1{
+        font-size: 14px;
+    }
+    .A-Nav:hover{
+        transform:translateY(-2em);
+    }
+    #ContenedorProyectos a:hover > div {
+        position: relative;
+    }
+
 }
