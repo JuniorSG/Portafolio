@@ -58,44 +58,32 @@ window.addEventListener("click", (e)=>{
         location.hash = "#";
         VisorImg = false;
     }
-    if (VisorImg==false && e.target.hash == "#home") {
-        translateNum=0;
-        for (let i = 0; i < divclass.length; i++) {
-            divclass[i].style.transform="translateY("+translateNum+"px)";
-        }
-    }else if (VisorImg==false && e.target.hash == "#about") {
-        translateNum=-750;
-        for (let i = 0; i < divclass.length; i++) {
-            divclass[i].style.transform="translateY("+translateNum+"px)";
-        }
-    }else if (VisorImg==false && e.target.hash == "#proyects") {
-        translateNum=-2300;
-        for (let i = 0; i < divclass.length; i++) {
-            divclass[i].style.transform="translateY("+translateNum+"px)";
-        }
-    } else if (VisorImg==false && e.target.hash == "#contact") {
-        translateNum=-2450;
-        // Footer
-        Footerer.style.top="80%";
-        FooterMaxRange = true;
-        // 
-        for (let i = 0; i < divclass.length; i++) {
-            divclass[i].style.transform="translateY("+translateNum+"px)";
-        }   
-    }
+    // if (VisorImg==false && e.target.hash == "#home") {
+    //     translateNum=0;
+    //     for (let i = 0; i < divclass.length; i++) {
+    //         divclass[i].style.transform="translateY("+translateNum+"px)";
+    //     }
+    // }else if (VisorImg==false && e.target.hash == "#about") {
+    //     translateNum=-750;
+    //     for (let i = 0; i < divclass.length; i++) {
+    //         divclass[i].style.transform="translateY("+translateNum+"px)";
+    //     }
+    // }else if (VisorImg==false && e.target.hash == "#proyects") {
+    //     translateNum=-2300;
+    //     for (let i = 0; i < divclass.length; i++) {
+    //         divclass[i].style.transform="translateY("+translateNum+"px)";
+    //     }
+    // } else if (VisorImg==false && e.target.hash == "#contact") {
+    //     translateNum=-2450;
+    //     // Footer
+    //     Footerer.style.top="80%";
+    //     FooterMaxRange = true;
+    //     // 
+    //     for (let i = 0; i < divclass.length; i++) {
+    //         divclass[i].style.transform="translateY("+translateNum+"px)";
+    //     }   
+    // }
 })
-
-Footerer.addEventListener("mouseover", (e)=>{
-    if (FooterMaxRange == false) {
-        Footerer.style.top="80%";
-    }
-})
-Footerer.addEventListener("mouseout", (e)=>{
-    if (FooterMaxRange == false) {
-        Footerer.style.top="99%";
-    }
-})
-
 
     var StylerSheet = document.getElementById("Styler")
     var Scripter = document.getElementById("Scripter")

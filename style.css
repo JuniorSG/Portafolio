@@ -22,7 +22,8 @@ body{
     flex-direction: column;
     background-color: rgb(2, 2, 2);
     background-image: url(img/BG.gif);
-    background-size: 25%;
+    
+    background-size: 20%;
 }
 .ContenedorIdioms{
     margin: 10px;
@@ -150,6 +151,7 @@ h4{
     display: flex;
     justify-content:center;
     align-items: center;
+    transition: 1s;
 }
 
 #Div2-1{
@@ -162,7 +164,7 @@ h4{
     width:90%;
     height:300px;
     font-size:50px;
-    transition:2s;
+    transition:1.1s;
     color: rgb(180, 180, 180);
 
 }
@@ -181,7 +183,7 @@ h4{
 
 /* About */
 #Div3{
-    margin: 50vw 0px 0px 0px ;
+    margin: 50vw 0px 100px 0px ;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     height: max-content;
@@ -229,7 +231,7 @@ h4{
     gap: 10px;
     justify-content: center;
     width: 90vw;
-    height: max-content;
+    height: 200px;
     transform:translateY(0px);
 }
 
@@ -255,22 +257,19 @@ h4{
     height: 200px;
 }
 
-#ContenedorProyectos a:hover > div > img {
+#ContenedorProyectos a > div:hover > img {
     transition: 1s;
     transform:scale(1.2);
 }
 #ContenedorProyectos a > div > img {
     transition: 1s;
-    z-index: 10;
 }
 #ContenedorProyectos a > div {
     transition: 0.5s;
+    overflow: hidden;
 }
-#ContenedorProyectos a:hover > div {
-    position: absolute;
+#ContenedorProyectos a > div:hover {
     transition: 0.5s;
-    transform: translateX(-50px) translateY(-30px) scale(1.2);
-    z-index: 10;
     box-shadow: 0px 0px 13px 1px rgb(255, 255, 255);
 }
 
@@ -353,7 +352,7 @@ h4{
 #footer{
     /* border-top: 5px solid rgb(255, 255, 255); */
     /* border-style: groove; */
-    top: 100vh;
+    position: relative;
     background-color: rgba(0, 0, 0, 0.884);
     height: max-content;
     width: 100%;
@@ -391,6 +390,9 @@ h4{
     font-size:25px;
     margin: 0px 10px -15px 10px;
 }
+#footer{
+    display: none;
+}
 
 /* widthxheight */
 /* @media (max-width:1280px){
@@ -399,7 +401,7 @@ h4{
 @media (min-width:1200px){
     #ContenedorProyectos{
         position: absolute;
-        top: 2850px;
+        top: 2950px;
         left: -1vw;
     }
     .PreImagenes{
@@ -439,17 +441,23 @@ h4{
     }
     #footer{
         margin-top: 100px;
+        display: flex;
+        justify-content: space-around;
     }
-    #ContenedorProyectos a:hover > div {
-        position: absolute;
-        transition: 0.5s;
-        transform: scale(1.1);
-        z-index: 10;
-        box-shadow: 0px 0px 13px 1px rgb(255, 255, 255);
+    #FooterContenedor{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
 
 }
 @media (max-width:875px){
+    #Div1{
+        /* TOP, RIGHT, BOTTOM, LEFT */
+        width: max-content;
+        margin: 28vw 0px 0px 20vw;
+    }
     #ContenedorProyectos{
         grid-template-columns:repeat(1, 350px);
     }
@@ -472,5 +480,7 @@ h4{
     #ContenedorProyectos a:hover > div {
         position: relative;
     }
-
+    #footer{
+        position: relative;
+    }
 }
