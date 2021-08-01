@@ -19,11 +19,6 @@ camera.position.y = -0.45;
 
 //SCENE
 scene = new THREE.Scene();
-// scene.background = new THREE.Color (0x444444,0);
-
-//LIGHTS
-// var light = new THREE.AmbientLight(0xffffff,0.4);
-// scene.add(light);
 
 var light2 = new THREE.PointLight(0xffffff);
 scene.add(light2);
@@ -47,7 +42,7 @@ function handle_load(gltf) {
     
     scene.add( object );
     object.position.z = -50;
-    if (innerWidth>875){
+    if (innerWidth<875){
         object.scale.set(0.1, 0.1, 0.1);
     }else{
         object.scale.set(0.2, 0.2, 0.2);

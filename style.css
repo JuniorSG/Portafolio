@@ -414,6 +414,7 @@ h4{
         width: max-content;
         margin: 28vw 0px 0px 20vw;
     }
+    
     #ContenedorProyectos{
         grid-template-columns:repeat(1, 350px);
     }
