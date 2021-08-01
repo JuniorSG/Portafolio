@@ -42,11 +42,7 @@ function handle_load(gltf) {
     
     scene.add( object );
     object.position.z = -50;
-    if (innerWidth<875){
-        object.scale.set(0.08, 0.08, 0.08);
-    }else{
-        object.scale.set(0.2, 0.2, 0.2);
-    }
+    object.scale.set(0.2, 0.2, 0.2);
     object.position.set(0, -0.5, 0);
     
     light2.lookAt(object.position);
