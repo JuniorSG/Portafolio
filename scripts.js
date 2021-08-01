@@ -54,44 +54,12 @@ function redimensionar(){
 }
 
 window.addEventListener("click", (e)=>{
-    if (e.target.className=="light-box") {
+    if (e.target.className=="light-box" || e.target.className=="Show") {
         location.hash = "#";
         VisorImg = false;
     }
-    // if (VisorImg==false && e.target.hash == "#home") {
-    //     translateNum=0;
-    //     for (let i = 0; i < divclass.length; i++) {
-    //         divclass[i].style.transform="translateY("+translateNum+"px)";
-    //     }
-    // }else if (VisorImg==false && e.target.hash == "#about") {
-    //     translateNum=-750;
-    //     for (let i = 0; i < divclass.length; i++) {
-    //         divclass[i].style.transform="translateY("+translateNum+"px)";
-    //     }
-    // }else if (VisorImg==false && e.target.hash == "#proyects") {
-    //     translateNum=-2300;
-    //     for (let i = 0; i < divclass.length; i++) {
-    //         divclass[i].style.transform="translateY("+translateNum+"px)";
-    //     }
-    // } else if (VisorImg==false && e.target.hash == "#contact") {
-    //     translateNum=-2450;
-    //     // Footer
-    //     Footerer.style.top="80%";
-    //     FooterMaxRange = true;
-    //     // 
-    //     for (let i = 0; i < divclass.length; i++) {
-    //         divclass[i].style.transform="translateY("+translateNum+"px)";
-    //     }   
-    // }
 })
 
     var StylerSheet = document.getElementById("Styler")
     var Scripter = document.getElementById("Scripter")
     
-    
-    // Style
-    document.addEventListener("DOMContentLoaded", function() {
-        if (window.innerWidth<1200){
-            StylerSheet.href="style_2.css"
-        }
-      });
