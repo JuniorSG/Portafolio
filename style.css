@@ -267,6 +267,9 @@ h4{
 #ContenedorProyectos a > div {
     transition: 0.5s;
     overflow: hidden;
+    width: 350px;
+    height: 200px;
+    margin: 11.5vw;
 }
 #ContenedorProyectos a > div:hover {
     transition: 0.5s;
@@ -288,7 +291,7 @@ h4{
     justify-content:center;
     align-items: center;
     transform: scale(0);
-}imagenesP
+}
  .close{
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -411,7 +414,7 @@ h4{
 @media (max-width:875px){
     #canvas{
         width: 100vw;
-        height: 200vw;
+        height: 150vw;
         overflow: hidden;
     }
     #Div1{
@@ -445,9 +448,6 @@ h4{
     }
     #ContactContenedor > h4{
         font-size:14px;
-    }
-    .imagenesP{
-        margin: 11.5vw;
     }
 
     h1{
