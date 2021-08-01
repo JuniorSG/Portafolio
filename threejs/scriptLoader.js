@@ -43,7 +43,7 @@ function handle_load(gltf) {
     scene.add( object );
     object.position.z = -50;
     if (innerWidth<875){
-        object.scale.set(0.1, 0.1, 0.1);
+        object.scale.set(0.05, 0.05, 0.05);
     }else{
         object.scale.set(0.2, 0.2, 0.2);
     }
@@ -54,9 +54,14 @@ function handle_load(gltf) {
     //RESIZEas
     window.addEventListener("resize", redimensionar); 
     function redimensionar(){
-        camera.aspect= window.innerWidth / window.innerHeight;
+        if (innerWidth<875){
+            camera.aspect= window.innerWidth / (window.innerHeight*0.5);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }else{
+            camera.aspect= window.innerWidth / window.innerHeight;
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
         camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.render(scene, camera);
     }
 
