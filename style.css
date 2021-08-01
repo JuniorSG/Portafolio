@@ -409,6 +409,11 @@ h4{
     
 } */
 @media (max-width:875px){
+    #canvas{
+        width: 100vw;
+        height: 200vw;
+        overflow: hidden;
+    }
     #Div1{
         /* TOP, RIGHT, BOTTOM, LEFT */
         width: max-content;
