@@ -427,6 +427,7 @@ h4{
         grid-template-columns:repeat(1, 350px);
     }
     #Div3{
+        margin-bottom: 0px;
         grid-template-columns:repeat(1, 100vw);
 
     }
