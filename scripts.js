@@ -55,8 +55,13 @@ function redimensionar(){
 
 window.addEventListener("click", (e)=>{
     if (e.target.className=="light-box" || e.target.className=="Show") {
-        location.hash = "#proyectos";
-        VisorImg = false;
+        if(window.innerWidth<=900){
+            location.hash = "#cProyectos";
+            VisorImg = false;
+        }else{
+            location.hash = "#proyectos";
+            VisorImg = false;
+        }   
     }
 })
 

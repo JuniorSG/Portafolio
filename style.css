@@ -406,7 +406,7 @@ h4{
 /* @media (max-width:1280px){
     
 } */
-@media (max-width:875px){
+@media (max-width:900px){
     #canvas{
         width: 100vw;
         height: 150vw;
@@ -415,7 +415,7 @@ h4{
     #Div1{
         /* TOP, RIGHT, BOTTOM, LEFT */
         width: max-content;
-        margin: 28vw 0px 0px 20vw;
+        margin: 35vh 0px 0px 20vw;
     }
     
     .ContenedorProyectos{
@@ -455,7 +455,7 @@ h4{
         align-items: center;
         margin-left: 0vw;
         margin-right: 0vw;
-        top: -10px;
+        top: 20px;
     }
 
     #BioT{
