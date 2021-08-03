@@ -12,17 +12,34 @@
    
    
 </head>
-<body id="body">
-
+<body>
+<div id="Home">
+   <!-- Navegador Menu -->
+   <div id="navbar">
+      <div id="navR">
+         <div class="A-Nav">
+            <a href="" class="a1">Home</a>
+            <a href="#Home" class="A-Hover a1">Home</a>
+         </div>
+         <div class="A-Nav">
+            <a href="" class="a1">Proyects</a>
+            <a href="#proyectos" class="A-Hover a1">Proyects</a>
+         </div>
+         <div class="A-Nav">
+            <a href="" class="a1">Contact</a>
+            <a href="#contact" class="A-Hover a1">Contact</a>
+         </div>
+      </div>
+   </div>
    <!-- LOADING -->
    <div id="contenedorCarga">
       <div id="iconCarga"></div>
    </div>
    <!-- SALUDO -->
-   <div class="divclass" id="Div1"><h1>Hello World!</br>&nbsp&nbsp&nbspMy name is </br>&nbsp&nbsp&nbsp&nbsp&nbsp Junior Sanchez</h1></div>
+   <div class="divclass" id="Div1"><h1>{Hello World}</br>&nbsp&nbsp&nbspMy name is </br>&nbsp&nbsp&nbsp&nbsp&nbsp Junior Sanchez</h1></div>
    
    <!-- BIO -->
-   <div class="divclass" onmouseover="AbrirDiv2_1()" onmouseout="CerrarDiv2_1()" id="Div2">
+   <div class="divclass" id="Div2">
       <!-- CHILD -->
       <h1 id="BioT">About Me</h1>
       <div class="Div2-1-inactive" id="Div2-1"><h4>I'm an ambitious person in my own personal improvement, I really like to learn new things about people and situations to increase my knowledge every single day...</br></br>"We all have the power to learn, learning gives you knowledge and knowledge itself is power".</h4></div>
@@ -49,10 +66,10 @@
          <div>
             <h2>Knowledge</h2>
             <div id="KnowledgeContent">
-               <h3>HTM, CSS, JS, React, Blender</h3>
+               <h3>HTM, CSS, JS, React</h3>
                <h3>PHP, NodeJs ,ThreeJS, GIT</h3>
-               <h3>ExpressJs, Wordpress, Python</h3>
-               <h3>MySQL, AJAX, PostgreSQL</h3>
+               <h3>ExpressJs, Python</h3>
+               <h3>MySQL, Wordpress, Blender</h3>
             </div>
          </div>
       </div>
@@ -73,57 +90,58 @@
    </div>
 
    <!-- ABOUT THREEJS code-->
-   
-   <div class="divclass" id="canvasFrame">
-      <canvas id="canvas"></canvas>
-      <div id="ContenedorProyectos">
-         <a href="#imagen1">
-            <div class="PreImagenes" id="Preimg-1">
-               <img src="img/PreImg1.png" alt="" class="imagenesP" onclick="VisorTrue()">
-            </div>
-         </a>
+   <div id="proyectos">
+      <div class="divclass" id="canvasFrame">
+         <canvas id="canvas"></canvas>
+         <div class="ContenedorProyectos">
+            <a href="#imagen1">
+               <div class="PreImagenes" id="Preimg-1">
+                  <img src="img/PreImg1.png" alt="" class="imagenesP" onclick="VisorTrue()">
+               </div>
+            </a>
 
-         <a href="#imagen2" >
-            <div class="PreImagenes" id="Preimg-2">
-               <img src="img/PreImg2.png" alt="" class="imagenesP" onclick="VisorTrue()">
-            </div>
-         </a>
+            <a href="#imagen2" >
+               <div class="PreImagenes" id="Preimg-2">
+                  <img src="img/PreImg2.png" alt="" class="imagenesP" onclick="VisorTrue()">
+               </div>
+            </a>
 
-         <a href="#imagen3" >
-            <div class="PreImagenes" id="Preimg-3">
-               <img src="img/PreImg3.png" alt="" class="imagenesP" onclick="VisorTrue()">
-            </div>
-         </a>
+            <a href="#imagen3" >
+               <div class="PreImagenes" id="Preimg-3">
+                  <img src="img/PreImg3.png" alt="" class="imagenesP" onclick="VisorTrue()">
+               </div>
+            </a>
 
-         <a href="#imagen4" >
-            <div class="PreImagenes" id="Preimg-4">
-               <img src="img/PreImg4.png" alt="" class="imagenesP" onclick="VisorTrue()">
-            </div>
-         </a>
+            <a href="#imagen4" >
+               <div class="PreImagenes" id="Preimg-4">
+                  <img src="img/PreImg4.png" alt="" class="imagenesP" onclick="VisorTrue()">
+               </div>
+            </a>
 
-         <a href="#imagen5" >
-            <div class="PreImagenes" id="Preimg-5">
-               <img src="img/PreImg5.png" alt="" class="imagenesP" onclick="VisorTrue()">
-            </div>
-         </a>
+            <a href="#imagen5" >
+               <div class="PreImagenes" id="Preimg-5">
+                  <img src="img/PreImg5.png" alt="" class="imagenesP" onclick="VisorTrue()">
+               </div>
+            </a>
 
-         <a href="#imagen6" >
-            <div class="PreImagenes" id="Preimg-6">
-               <img src="img/PreImg6.png" alt="" class="imagenesP" onclick="VisorTrue()">
-            </div>
-         </a>
+            <a href="#imagen6" >
+               <div class="PreImagenes" id="Preimg-6">
+                  <img src="img/PreImg6.png" alt="" class="imagenesP" onclick="VisorTrue()">
+               </div>
+            </a>
 
-         <a href="#imagen7" >
-            <div class="PreImagenes" id="Preimg-7">
-               <img src="img/PreImg7.png" alt="" class="imagenesP" onclick="VisorTrue()">
-            </div>
-         </a>
+            <a href="#imagen7" >
+               <div class="PreImagenes" id="Preimg-7">
+                  <img src="img/PreImg7.png" alt="" class="imagenesP" onclick="VisorTrue()">
+               </div>
+            </a>
 
-         <a href="#imagen8" >
-            <div class="PreImagenes" id="Preimg-8">
-               <img src="img/PreImg8.png" alt="" class="imagenesP" onclick="VisorTrue()">
-            </div>
-         </a>      
+            <a href="#imagen8" >
+               <div class="PreImagenes" id="Preimg-8">
+                  <img src="img/PreImg8.png" alt="" class="imagenesP" onclick="VisorTrue()">
+               </div>
+            </a>      
+         </div>
       </div>
    </div>
 
@@ -152,28 +170,8 @@
    <div class="light-box" id="imagen8">
       <img src="img/Img8.png" alt="" class="Show">
    </div>
-   <!-- Navegador Menu -->
-   <div id="navbar">
-      <!-- <div id="navL" style="background-image:url('https://i.pinimg.com/originals/4b/5d/a6/4b5da63844b3760bb5dcc9ef2e6fa402.gif')">
-         <div id="LOGOTIPO"><img src="img/LOGO.png" width="100" height="100" alt="" srcset=""></div>
-      </div> -->
-      <div id="navR">
-         <div class="A-Nav">
-            <a href="" class="a1">Home</a>
-            <a href="#home" class="A-Hover a1">Home</a>
-         </div>
-         <div class="A-Nav">
-            <a href="" class="a1">Proyects</a>
-            <a href="#proyects" class="A-Hover a1">Proyects</a>
-         </div>
-         <div class="A-Nav">
-            <a href="" class="a1">Contact &nbsp;</a>
-            <a href="#contact" class="A-Hover a1">Contact</a>
-         </div>
-      </div>
-    </div>
     <!-- FOOTER CONTACT-->
-   <div id="footer">
+   <div id="contact">
       <div id="FooterContenedor">
          <div> 
             <h3 id="FootT">Contact:</h2>
@@ -188,7 +186,7 @@
       </div>
    </div>
 
-
+   </div>
 </body>
 <!--\\\ THREE Scripts ZONE ///-->
 <script src="./threejs/scriptLoader.js"></script>

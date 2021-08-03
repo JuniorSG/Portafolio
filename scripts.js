@@ -39,7 +39,7 @@ function VisorFalse(){
 // Salir del visor
 window.addEventListener("keyup",(e)=>{
     if (e.key =="Escape") {
-        location.hash = "#";
+        location.hash = "#proyectos";
         VisorImg = false;
     }
 })
@@ -55,7 +55,7 @@ function redimensionar(){
 
 window.addEventListener("click", (e)=>{
     if (e.target.className=="light-box" || e.target.className=="Show") {
-        location.hash = "#";
+        location.hash = "#proyectos";
         VisorImg = false;
     }
 })
