@@ -124,7 +124,7 @@ h4{
     flex-direction: column;
     margin: 0px;
     width:max-content;
-    height:2.5em;
+    height:2em;
     transition: 0.5s;
 }
 .A-Nav:hover{
