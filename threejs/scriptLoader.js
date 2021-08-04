@@ -60,34 +60,26 @@ function handle_load(gltf) {
 
 
     // Condicional de si es abierto por TLF (Reemplazar)
-    if (window.innerWidth<1000){
-        window.addEventListener("deviceorientation", handleOrientation, true);
-        function handleOrientation(event) {
-            var absolute = event.absolute;
-            var alpha    = event.alpha;
-            var beta     = event.beta;
-            var gamma    = event.gamma;
-            
-            Absolute.innerHTML=absolute;
-            Alpha.innerHTML=alpha;
+    if(window.innerWidth<900){
+        window.addEventListener("deviceorientation", (e)=>{
+            var beta = e.beta;
+            var gamma= e.gamma;
             object.lookAt(gamma,beta,30);
-            // Beta = Y, Gamma = X
-        }
-    }else if (window.innerWidth>1000){
-        window.addEventListener("mousemove", (e)=>{
-            var lookX = 0.05*(e.clientX-(window.innerWidth/2))
-            var lookY = (-(0.05*(e.clientY-(window.innerHeight/2)))+5)
-            object.lookAt(lookX,lookY,30);
-            light2.position.set(0, 1, 1);
-            // console.log(cube.lookAt);
-            window.addEventListener("mouseout", (e)=>{
-                lookX=0;
-                lookY=0;
-                light2.position.set(0, 0.5, -0.9);
-                object.lookAt(lookX,lookY,30)
-            });  
-        });
+        }); 
     }
+    window.addEventListener("mousemove", (e)=>{
+        var lookX = 0.05*(e.clientX-(window.innerWidth/2))
+        var lookY = (-(0.05*(e.clientY-(window.innerHeight/2)))+5)
+        object.lookAt(lookX,lookY,30);
+        light2.position.set(0, 1, 1);
+        // console.log(cube.lookAt);
+        window.addEventListener("mouseout", (e)=>{
+            lookX=0;
+            lookY=0;
+            light2.position.set(0, 0.5, -0.9);
+            object.lookAt(lookX,lookY,30)
+        });  
+    });
 }
 
 
