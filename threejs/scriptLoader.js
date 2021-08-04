@@ -56,11 +56,12 @@ function handle_load(gltf) {
         renderer.render(scene, camera);
     }
 
-    window.addEventListener("deviceorientation", handleOrientation, true);
+    
 
 
     // Condicional de si es abierto por TLF (Reemplazar)
-    if (window.innerWidth<900){
+    if (window.innerWidth<1000){
+        window.addEventListener("deviceorientation", handleOrientation, true);
         function handleOrientation(event) {
             var absolute = event.absolute;
             var alpha    = event.alpha;
@@ -72,7 +73,7 @@ function handle_load(gltf) {
             object.lookAt(gamma,beta,30);
             // Beta = Y, Gamma = X
         }
-    }else{
+    }else if (window.innerWidth>1000){
         window.addEventListener("mousemove", (e)=>{
             var lookX = 0.05*(e.clientX-(window.innerWidth/2))
             var lookY = (-(0.05*(e.clientY-(window.innerHeight/2)))+5)
