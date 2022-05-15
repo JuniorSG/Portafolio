@@ -1,199 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" id="HTMLPAGE">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Junior Sanchez</title>
-   <link rel="preconnect" href="https://fonts.googleapis.com">   
-   <link rel="stylesheet" id="Styler" href="style.css">
-   <script src="./threejs/three.js"></script>
-   <script src="./threejs/GLTFLoader.js"></script>
-   
-   
-</head>
-<body>
-<div id="Home">
-   <!-- Navegador Menu -->
-   <div id="navbar">
-      <div id="navR">
-         <div class="A-Nav">
-            <a href="" class="a1">Home</a>
-            <a href="#Home" class="A-Hover a1">Home</a>
-         </div>
-         <div class="A-Nav">
-            <a href="" class="a1">Proyects</a>
-            <a href="#proyectos" class="A-Hover a1">Proyects</a>
-         </div>
-         <div class="A-Nav">
-            <a href="" class="a1">Contact</a>
-            <a href="#contact" class="A-Hover a1">Contact</a>
-         </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Junior Sanchez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" id="Styler" href="style.css" />
+    <script src="./threejs/three.js"></script>
+    <script src="./threejs/GLTFLoader.js"></script>
+  </head>
+  <body>
+    <div id="Home">
+      <!-- ABOUT THREEJS code-->
+      <div id="proyectos">
+        <div class="divclass" id="canvasFrame">
+          <canvas id="canvas"></canvas>
+        </div>
       </div>
-   </div>
-   <!-- LOADING -->
-   <div id="contenedorCarga">
-      <div id="iconCarga"></div>
-   </div>
-   <!-- SALUDO -->
-   <div class="divclass" id="Div1"><h1>{Hello World}</br>&nbsp&nbsp&nbspMy name is </br>&nbsp&nbsp&nbsp&nbsp&nbsp Junior Sanchez</h1></div>
-   
-   <!-- BIO -->
-   <div class="divclass" id="Div2">
-      <!-- CHILD -->
-      <h1 id="BioT">About Me</h1>
-      <div class="Div2-1-inactive" id="Div2-1"><h4>I'm an ambitious person in my own personal improvement, I really like to learn new things about people and situations to increase my knowledge every single day...</br></br>"We all have the power to learn, learning gives you knowledge and knowledge itself is power".</h4></div>
-   </div>
+    </div>
+  </body>
+  <!--\\\ THREE Scripts ZONE ///-->
+  <script src="./threejs/scriptLoader.js"></script>
 
-   <!-- ABOUT -->
-   <div class="divclass" id="Div3">
-
-      <!-- Languages -->
-      <div class="About">
-         <div>
-            <h2>Languages</h2>
-            <div>
-               <h3>Espanish</h3>
-               <h3>English</h3>
-               <h3>French</h3>
-               <h3>&nbsp;</h3>
-            </div>
-         </div>
-      </div>
-      
-      <!-- Knowledge -->
-      <div class="About">
-         <div>
-            <h2>Knowledge</h2>
-            <div id="KnowledgeContent">
-               <h3>HTM, CSS, JS, React</h3>
-               <h3>PHP, NodeJs ,ThreeJS, GIT</h3>
-               <h3>ExpressJs, Python</h3>
-               <h3>MySQL, Wordpress, Blender</h3>
-            </div>
-         </div>
-      </div>
-
-      <!-- Strengths -->
-      <div class="About">
-         <div>
-            <h2>Strengths</h2>
-            <div>
-               <h3>Responsibility</h3>
-               <h3>Persistent</h3>
-               <h3>Focused</h3>
-               <h3>Fast learning</h3>
-            </div>
-         </div>
-      </div>
-      
-   </div>
-
-   <!-- ABOUT THREEJS code-->
-   <div id="proyectos">
-      <div class="divclass" id="canvasFrame">
-         <canvas id="canvas"></canvas>
-         <div id="cProyectos" class="ContenedorProyectos">
-            <a href="#imagen1">
-               <div class="PreImagenes" id="Preimg-1">
-                  <img src="img/PreImg1.png" alt="" class="imagenesP" onclick="VisorTrue()">
-               </div>
-            </a>
-
-            <a href="#imagen2" >
-               <div class="PreImagenes" id="Preimg-2">
-                  <img src="img/PreImg2.png" alt="" class="imagenesP" onclick="VisorTrue()">
-               </div>
-            </a>
-
-            <a href="#imagen3" >
-               <div class="PreImagenes" id="Preimg-3">
-                  <img src="img/PreImg3.png" alt="" class="imagenesP" onclick="VisorTrue()">
-               </div>
-            </a>
-
-            <a href="#imagen4" >
-               <div class="PreImagenes" id="Preimg-4">
-                  <img src="img/PreImg4.png" alt="" class="imagenesP" onclick="VisorTrue()">
-               </div>
-            </a>
-
-            <a href="#imagen5" >
-               <div class="PreImagenes" id="Preimg-5">
-                  <img src="img/PreImg5.png" alt="" class="imagenesP" onclick="VisorTrue()">
-               </div>
-            </a>
-
-            <a href="#imagen6" >
-               <div class="PreImagenes" id="Preimg-6">
-                  <img src="img/PreImg6.png" alt="" class="imagenesP" onclick="VisorTrue()">
-               </div>
-            </a>
-
-            <a href="#imagen7" >
-               <div class="PreImagenes" id="Preimg-7">
-                  <img src="img/PreImg7.png" alt="" class="imagenesP" onclick="VisorTrue()">
-               </div>
-            </a>
-
-            <a href="#imagen8" >
-               <div class="PreImagenes" id="Preimg-8">
-                  <img src="img/PreImg8.png" alt="" class="imagenesP" onclick="VisorTrue()">
-               </div>
-            </a>      
-         </div>
-      </div>
-   </div>
-
-
-   <div class="light-box" id="imagen1">
-      <img src="img/Img1.png" alt="" class="Show">
-   </div>
-   <div class="light-box" id="imagen2">
-      <img src="img/Img2.png" alt="" class="Show">
-   </div>
-   <div class="light-box" id="imagen3">
-      <img src="img/Img3.png" alt="" class="Show">
-   </div>
-   <div class="light-box" id="imagen4">
-      <img src="img/Img4.png" alt="" class="Show">
-   </div>
-   <div class="light-box" id="imagen5">
-      <img src="img/Img5.png" alt="" class="Show">
-   </div>
-   <div class="light-box" id="imagen6">
-      <img src="img/Img6.png" alt="" class="Show">
-   </div>
-   <div class="light-box" id="imagen7">
-      <img src="img/Img7.png" alt="" class="Show">
-   </div>
-   <div class="light-box" id="imagen8">
-      <img src="img/Img8.png" alt="" class="Show">
-   </div>
-    <!-- FOOTER CONTACT-->
-   <div id="contact">
-      <div id="FooterContenedor">
-         <div> 
-            <h3 id="FootT">Contact:</h2>
-         </div>
-         <div id="ContactContenedor">
-            <img src="img/Mail.png" alt="" srcset="">
-            <h4>op.jasg@gmail.com</h4>
-            <h5 id="Sep">&nbsp</h5>
-            <img src="img/Tlf.png" alt="" srcset="">
-            <h4>+54 9 11 27017234</h4>
-         </div>
-      </div>
-   </div>
-
-   </div>
-</body>
-<!--\\\ THREE Scripts ZONE ///-->
-<script src="./threejs/scriptLoader.js"></script>
-
-
-<script id="Scripter" src="scripts.js"></script>
-<script src="functions.js"></script>
-
-
+  <!-- <script id="Scripter" src="scripts.js"></script> -->
+  <!-- <script src="functions.js"></script> -->
 </html>
